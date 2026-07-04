@@ -5,7 +5,6 @@ import 'core/di/injection.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_cubit.dart';
-import 'core/utils/db_seeder.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -19,7 +18,7 @@ void main() async {
 
   // Seed the database with the portfolio data.
   // You can comment this line out after the first run.
-  await seedDatabase();
+  // await seedDatabase(); // Disabled after initial seed
 
   runApp(const MyApp());
 }
