@@ -7,9 +7,13 @@
   <img src="https://img.shields.io/badge/BLoC-525C68?style=for-the-badge&logo=bloc&logoColor=white" alt="BLoC" />
   <img src="https://img.shields.io/badge/Clean_Architecture-4CAF50?style=for-the-badge" alt="Clean Architecture" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <br>
+  <a href="https://ahmedzamzam.netlify.app/"><img src="https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
 </p>
 
 A premium, modern **Portfolio and Admin Dashboard Application** built with **Flutter**, following strict **Clean Architecture** patterns, and backed by **Firebase Firestore**. The application is designed to dynamically load and display professional information (profile, skills, projects, certificates, experiences) while providing a fully-featured, secure admin dashboard to edit, manage, and update the data in real-time.
+
+**🔗 Live Demo:** [ahmedzamzam.netlify.app](https://ahmedzamzam.netlify.app/)
 
 ---
 
