@@ -83,7 +83,7 @@ class _SkillCardState extends State<_SkillCard> {
                 height: 120,
                 transform:
                     hovered
-                        ? (Matrix4.identity()..scale(1.05, 1.05))
+                        ? (Matrix4.identity()..scaleByDouble(1.05, 1.05, 1.0, 1.0))
                         : Matrix4.identity(),
                 decoration: BoxDecoration(
                   color:

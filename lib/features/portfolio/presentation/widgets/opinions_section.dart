@@ -95,7 +95,7 @@ class _OpinionsSectionState extends State<OpinionsSection> {
                           dialogField('Company', companyCtrl),
                           const SizedBox(height: 12),
                           DropdownButtonFormField<int>(
-                            value: rating,
+                            initialValue: rating,
                             decoration: InputDecoration(
                               labelText: 'Rating',
                               border: OutlineInputBorder(

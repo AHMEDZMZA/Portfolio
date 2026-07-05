@@ -1,6 +1,10 @@
+//flutter build web --release --base-href /
+//git add build/web; git commit -m "update build"; git push
+//----------------------------------------------------
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/di/injection.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
@@ -32,13 +36,21 @@ class MyApp extends StatelessWidget {
       create: (_) => sl<ThemeCubit>(),
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, mode) {
-          return MaterialApp.router(
-            title: 'Ahmed Zamzam',
-            debugShowCheckedModeBanner: false,
-            routerConfig: AppRouter.router,
-            themeMode: mode,
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
+          return ScreenUtilInit(
+            // Design size - baseline for scaling (1920x1080 for web/desktop)
+            designSize: const Size(1920, 1080),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (context, child) {
+              return MaterialApp.router(
+                title: 'Ahmed Zamzam',
+                debugShowCheckedModeBanner: false,
+                routerConfig: AppRouter.router,
+                themeMode: mode,
+                theme: AppTheme.lightTheme,
+                darkTheme: AppTheme.darkTheme,
+              );
+            },
           );
         },
       ),

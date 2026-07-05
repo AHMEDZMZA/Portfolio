@@ -1,7 +1,8 @@
-import 'dart:html' as html;
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:ui_web' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:web/web.dart' as web;
 
 import '../../../../core/constants/app_constants.dart';
 
@@ -26,14 +27,14 @@ class _CvViewerContentState extends State<CvViewerContent> {
     super.initState();
     _viewType = 'cv-iframe-view-${widget.cvUrl.hashCode}';
     if (_registeredViewTypes.add(_viewType)) {
-      // ignore: undefined_prefixed_name
       ui.platformViewRegistry.registerViewFactory(_viewType, (int viewId) {
-        return html.IFrameElement()
+        final iframe = web.HTMLIFrameElement()
           ..src = widget.cvUrl
           ..style.border = 'none'
           ..style.width = '100%'
           ..style.height = '100%'
           ..allowFullscreen = true;
+        return iframe;
       });
     }
   }

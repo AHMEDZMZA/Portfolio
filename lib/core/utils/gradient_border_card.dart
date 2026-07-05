@@ -53,8 +53,8 @@ class _GradientBorderCardState extends State<GradientBorderCard> {
             transform:
                 hovered
                     ? (Matrix4.identity()
-                      ..translate(-2.0, -2.0)
-                      ..scale(1.02, 1.02))
+                      ..translateByDouble(-2.0, -2.0, 0, 0)
+                      ..scaleByDouble(1.02, 1.02, 1.0, 1.0))
                     : Matrix4.identity(),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(widget.borderRadius),

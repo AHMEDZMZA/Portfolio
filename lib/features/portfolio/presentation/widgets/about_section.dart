@@ -113,7 +113,7 @@ class _BadgeChipState extends State<_BadgeChip> {
             ),
             transform:
                 hovered
-                    ? (Matrix4.identity()..scale(1.05, 1.05))
+                    ? (Matrix4.identity()..scaleByDouble(1.05, 1.05, 1.0, 1.0))
                     : Matrix4.identity(),
             child: Text(
               widget.label,
